@@ -17,17 +17,43 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #6bffb52d;
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+.container {
+  @apply col-span-1 h-[90vh] border-[1px] border-solid border-black rounded-lg bg-white p-3
+}
+
+.btn {
+  @apply border-[1px] border-solid border-black px-6 py-1 rounded-lg
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: gray;
+  height: 6px;
+}
+
+@media (max-width: 800px) {
+  ::-webkit-scrollbar {
+      display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      display: none;
   }
 }
